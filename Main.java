@@ -1,4 +1,7 @@
-// OOP Adventure Game - Versi Refactor & Lebih Sempurna
+//Revan Permana Hakim Saputra 102062400134
+//Bryan Zefanya Maitimu 102062400022
+
+// OOP Adventure Game 
 import java.util.*;
 
 class Character {
