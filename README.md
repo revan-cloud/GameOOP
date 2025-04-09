@@ -2,6 +2,7 @@ Kelompok R
 Disusun oleh :
 Revan Permana Hakim Saputra (102062400134)
 Bryan Zefanya Maitimu (102062400022 )
+Kelas : IS-07-04
 
 
 **Game Petualangan Berbasis OOP**
@@ -88,6 +89,13 @@ pilihan
   |-> [Scene3] -> [Scene6] -> [Scene9] -> [Scene10] -> Ending
   |-> [Scene 4] -> [Scene 3/6/1] -> Lanjut..
   |-> [Scene 7] -> [Scene 6] -> [Scene 9] -> [Scene 10] -> Ending
+
+
+**SUMBER RUJUKAN**
+Berikut adalah sumber dan referensi yang digunakan dalam pembuatan game ini :
+1. Dokumentasi resmi Java - – https://docs.oracle.com/javase/
+2. Java Scanner Class – https://www.w3schools.com/java/java_user_input.asp
+3. Dasar OOP dalam Java – Buku "Object-Oriented Programming with Java" oleh David J. Barnes
 
 
   **REFLEKSI**
