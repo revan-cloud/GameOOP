@@ -1,7 +1,7 @@
 Kelompok R
 Disusun oleh :
 Revan Permana Hakim Saputra (102062400134)
-Bryan Zefanya Maitimu ( )
+Bryan Zefanya Maitimu (102062400022 )
 
 
 **Game Petualangan Berbasis OOP**
