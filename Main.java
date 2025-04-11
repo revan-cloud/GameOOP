@@ -4,31 +4,33 @@
 // OOP Adventure Game 
 import java.util.*;
 
+//Class ChARACTER
 class Character {
     private String name;
     private int health;
     private int XP;
     private List<String> items;
 
+    //Constructor
     public Character(String name, int health) {
         this.name = name;
         this.health = health;
         this.XP = 0;
         this.items = new ArrayList<>();
     }
-
+//Method Untuk menerima damage
     public void takeDamage(int damage) {
         this.health = Math.max(this.health - damage, 0);
     }
-
+//Method untuk menyembuhkan karakter
     public void heal(int amount) {
         this.health = Math.min(this.health + amount, 100);
     }
-
+//Method menambah exp
     public void addXP(int amount) {
         this.XP += amount;
     }
-
+//method menambah item 
     public void addItem(String item) {
         if (item != null && !item.isEmpty()) {
             items.add(item);
@@ -51,11 +53,12 @@ class Character {
         return items;
     }
 }
-
+//Class scene
 class Scene {
     private String description;
     private List<Choice> choices;
 
+//Constructor
     public Scene(String description) {
         this.description = description;
         this.choices = new ArrayList<>();
@@ -64,7 +67,7 @@ class Scene {
     public void addChoice(String text, Scene nextScene, int damage, int heal, int xp, String item) {
         choices.add(new Choice(text, nextScene, damage, heal, xp, item));
     }
-
+//Menampilkan deskripsi dan daftar pilihan
     public void displayScene() {
         System.out.println("\n" + description);
         for (int i = 0; i < choices.size(); i++) {
@@ -85,7 +88,7 @@ class Scene {
 
         return choice.nextScene;
     }
-
+//INNER CLASS CHOICE
     private static class Choice {
         String text;
         Scene nextScene;
@@ -112,10 +115,11 @@ class Story {
         this.startScene = startScene;
         this.player = player;
     }
-
+//Constructor
     public void start() {
         Scene currentScene = startScene;
 
+//loop selama pemain masih hidup dan scene belum selesai
         while (currentScene != null && player.getHealth() > 0) {
             currentScene.displayScene();
             String input = scanner.nextLine().trim();
@@ -132,7 +136,7 @@ class Story {
                 currentScene = next;
             }
         }
-
+//cek pemain mati atau ngga
         if (player.getHealth() <= 0) {
             System.out.println("\n=== Kamu gugur dalam petualangan ini... ===");
         }
@@ -140,7 +144,7 @@ class Story {
         System.out.println("\n=== Permainan Selesai ===");
         showInfo();
     }
-
+//Menampilkan info karakter
     private void showInfo() {
         System.out.println("\n=== INFO ===");
         System.out.println("Nama: " + player.getName());
